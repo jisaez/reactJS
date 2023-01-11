@@ -8,7 +8,7 @@ const ThankYou = () => {
         <div className="container">
             <div className="row my-5">
                 <div className="col text-center">
-                    <div class="alert alert-info" role="alert">
+                    <div className="alert alert-info" role="alert">
                         <h1>¡Gracias por tu Compra!</h1>
                         <p>Tu número de orden es: <b>{id}</b></p>
                     </div>

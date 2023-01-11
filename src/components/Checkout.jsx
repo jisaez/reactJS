@@ -27,13 +27,13 @@ const Checkout = () => {
             const batch = writeBatch(db);
 
             cart.forEach(prod => {
-                let producto = doc(db, "productos", prod.id);
+                const producto = doc(db, "productos", prod.id);
                 getDoc(producto).then((snapShot) => {
                     batch.update(producto, {stock:snapShot.data().stock - prod.quantity});
+                    batch.commit();
                 });
             });
             
-            batch.commit();
             clear();
         });
     }

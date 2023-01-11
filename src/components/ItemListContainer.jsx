@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import { collection, getDocs, getFirestore, query, where, orderBy } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where, } from "firebase/firestore";
 import Loading from "./Loading";
-// import arrayProductos from "./json/productos.json";
 
 
 const ItemListContainer = () => {
@@ -11,13 +10,6 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
-    // useEffect(() => {
-    //     const db = getFirestore();
-    //     const itemsCollection = collection(db, "productos");
-    //     arrayProductos.forEach((prod) => {
-    //         addDoc(itemsCollection, prod);
-    //     });
-    // }, []);
 
     useEffect(() => {
         const db = getFirestore();

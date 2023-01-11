@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import Loading from "./Loading";
 
+
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ const ItemDetailContainer = () => {
             } else {
                 console.log("El Producto No Existe!");
             }
+            
         });
     }, [id]);
 
